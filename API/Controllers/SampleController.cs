@@ -20,7 +20,7 @@ namespace API.Controllers
         {
             try
             {
-                var requester = new RabbitMQUtils.ReqRes.ReqResBuilder().WithConnection(_connectionManager)
+                var requester = new RabbitMQUtils.RequestResponse.ReqResBuilder().WithConnection(_connectionManager)
                 .WithSettings(_settingsManager, "user.login")
                 .WithEvent(async (corId, message) => {
                     var content = $"values: corID:{corId}, message:{message}";
@@ -41,7 +41,7 @@ namespace API.Controllers
         {
             try
             {
-                var requester = new RabbitMQUtils.ReqRes.ReqResBuilder().WithConnection(_connectionManager)
+                var requester = new RabbitMQUtils.RequestResponse.ReqResBuilder().WithConnection(_connectionManager)
                 .WithSettings(_settingsManager, "user.registration")
                 .WithEvent(async (corId, message) => {
                     var content = $"values: corID:{corId}, message:{message}";

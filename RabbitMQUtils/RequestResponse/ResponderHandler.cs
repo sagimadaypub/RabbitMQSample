@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RabbitMQUtils.ReqRes
+namespace RabbitMQUtils.RequestResponse
 {
     ///this class is a reponser to rabbitmq requests in queues
     /// <summary>

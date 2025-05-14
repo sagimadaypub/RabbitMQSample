@@ -11,7 +11,7 @@ using RabbitMQ;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace RabbitMQUtils.ReqRes
+namespace RabbitMQUtils.RequestResponse
 {
     //to-do:
     //set key for settings

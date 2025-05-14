@@ -1,5 +1,5 @@
 ﻿using RabbitMQUtils;
-using RabbitMQUtils.ReqRes;
+using RabbitMQUtils.RequestResponse;
 
 namespace API
 {
