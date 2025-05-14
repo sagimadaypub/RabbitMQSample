@@ -16,7 +16,7 @@ namespace API.Controllers
             _settingsManager = settingsManager;
         }
         [HttpGet("PublishLoginMessage")]
-        public async Task<IActionResult> PublishLoginMessage(string message)
+        public async Task<IActionResult> PublishLoginMessageAsync(string message)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace API.Controllers
                     Console.WriteLine(content);
                     return content;
                 }).CreateRequester();
-                await requester.RequestAndWait(message);
+                await requester.RequestAndWaitAsync(message);
                 return Ok(requester.RequesterResult);
             }
             catch (Exception e)
@@ -37,7 +37,7 @@ namespace API.Controllers
         }
 
         [HttpGet("PublishRegistrationMessage")]
-        public async Task<IActionResult> PublishRegistrationMessage(string message)
+        public async Task<IActionResult> PublishRegistrationMessageAsync(string message)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace API.Controllers
                     Console.WriteLine(content);
                     return content;
                 }).CreateRequester();
-                await requester.RequestAndWait(message);
+                await requester.RequestAndWaitAsync(message);
                 return Ok(requester.RequesterResult);
             }
             catch (Exception e)

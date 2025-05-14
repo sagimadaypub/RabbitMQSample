@@ -89,7 +89,7 @@ namespace RabbitMQUtils.RequestResponse
             }
         }
 
-        public async Task<bool> RequestAndWait(string message)
+        public async Task<bool> RequestAndWaitAsync(string message)
         {
             //make sure queues ready to use
             await EnsureInitializedAsync();

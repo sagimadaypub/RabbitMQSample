@@ -41,8 +41,8 @@ namespace API
 
             if(StartParallel)
             {
-                var t1 = loginConsumer.ListenAndRespond();
-                var t2 = registrationConsumer.ListenAndRespond();
+                var t1 = loginConsumer.ListenAndRespondAsync();
+                var t2 = registrationConsumer.ListenAndRespondAsync();
 
                 // Optional: log if they fail (don't block here)
                 _ = Task.WhenAll(t1, t2).ContinueWith(t =>
@@ -56,8 +56,8 @@ namespace API
             }
             else
             {
-                await loginConsumer.ListenAndRespond();
-                await registrationConsumer.ListenAndRespond();
+                await loginConsumer.ListenAndRespondAsync();
+                await registrationConsumer.ListenAndRespondAsync();
             }
 
             while (!stoppingToken.IsCancellationRequested) { }

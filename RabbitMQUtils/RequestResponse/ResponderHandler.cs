@@ -88,7 +88,7 @@ namespace RabbitMQUtils.RequestResponse
             }
         }
 
-        public async Task<bool> ListenAndRespond()
+        public async Task<bool> ListenAndRespondAsync()
         {
             try
             {
